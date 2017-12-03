@@ -1,25 +1,61 @@
 package com.example.android.basketballcourt;
 
+import android.content.res.Configuration;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
     int scorePanathinaikos = 0;
     int scoreRealMadrid = 0;
+    String STATE_PANATHINAIKOS;
+    String STATE_REALMADRID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayPanathinaikos(0);
-
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        //save the  user's current score state
+        savedInstanceState.putInt(STATE_PANATHINAIKOS, scorePanathinaikos);
+        savedInstanceState.putInt(STATE_REALMADRID, scoreRealMadrid);
 
+        //Always call the superclass so it can save the view hierarchy
+        super.onSaveInstanceState(savedInstanceState);
+    }
 
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        //Always call the superclass so it can restore the view hierarchy
+
+        super.onRestoreInstanceState(savedInstanceState);
+        //restore state members from saved instance
+        scorePanathinaikos = savedInstanceState.getInt(STATE_PANATHINAIKOS);
+        scoreRealMadrid = savedInstanceState.getInt(STATE_REALMADRID);
+        displayPanathinaikos(scorePanathinaikos);
+        displayForRealMadrid(scoreRealMadrid);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        // TODO Auto-generated method stub
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            System.out.println("this's landscape");
+
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            System.out.println("this's portrait");
+        }
+    }
+
+    
     /**
      * Displays the given score for Panathinaikos.
      */
@@ -97,4 +133,4 @@ public class MainActivity extends AppCompatActivity {
         displayPanathinaikos(scorePanathinaikos);
         displayForRealMadrid(scoreRealMadrid);
     }
-    }
+}

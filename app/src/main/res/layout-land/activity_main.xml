@@ -21,17 +21,17 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="4dp"
                 android:src="@drawable/pao" />
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
                 android:gravity="center"
-                android:padding="16dp"
+                android:padding="0dp"
                 android:text="@string/pao"
                 android:textColor="#01579B"
                 android:textIsSelectable="false"
@@ -41,10 +41,10 @@
             <TextView
                 android:id="@+id/team_a_score"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="71dp"
                 android:fontFamily="monospace"
                 android:gravity="center"
-                android:paddingBottom="24dp"
+                android:paddingBottom="8dp"
                 android:text="@string/zero"
                 android:textColor="#01579B"
                 android:textSize="56sp" />
@@ -52,10 +52,10 @@
 
             <Button
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="27dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginLeft="92dp"
+                android:layout_marginRight="92dp"
                 android:background="@drawable/button"
                 android:fontFamily="casual"
                 android:onClick="addThreeForPanathinaikos"
@@ -65,9 +65,9 @@
 
             <Button
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="92dp"
                 android:layout_marginRight="24dp"
                 android:background="@drawable/button"
                 android:fontFamily="casual"
@@ -78,9 +78,9 @@
 
             <Button
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="28dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="48dp"
+                android:layout_marginLeft="92dp"
                 android:layout_marginRight="24dp"
                 android:background="@drawable/button"
                 android:fontFamily="casual"
@@ -101,8 +101,8 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="4dp"
                 android:src="@drawable/real_madrid" />
 
             <TextView
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
                 android:gravity="center"
-                android:padding="16dp"
+                android:padding="0dp"
                 android:text="@string/real"
                 android:textColor="#01579B"
                 android:textSize="20sp"
@@ -120,10 +120,10 @@
             <TextView
                 android:id="@+id/team_b_score"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="71dp"
                 android:fontFamily="monospace"
                 android:gravity="center"
-                android:paddingBottom="24dp"
+                android:paddingBottom="8dp"
                 android:text="@string/zero"
                 android:textColor="#01579B"
                 android:textSize="56sp" />
@@ -131,10 +131,10 @@
 
             <Button
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="27dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginLeft="92dp"
+                android:layout_marginRight="92dp"
                 android:background="@drawable/button"
                 android:fontFamily="casual"
                 android:onClick="addThreeForRealMadrid"
@@ -144,10 +144,10 @@
 
             <Button
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="27dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="22dp"
+                android:layout_marginLeft="92dp"
+                android:layout_marginRight="92dp"
                 android:background="@drawable/button"
                 android:fontFamily="casual"
                 android:onClick="addTwoForRealMadrid"
@@ -157,10 +157,10 @@
 
             <Button
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="27dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="22dp"
+                android:layout_marginLeft="92dp"
+                android:layout_marginRight="92dp"
                 android:background="@drawable/button"
                 android:fontFamily="casual"
                 android:onClick="addOneForRealMadrid"
@@ -175,12 +175,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
         android:background="@drawable/button"
         android:fontFamily="casual"
         android:onClick="resetButton"
+        android:paddingBottom="8dp"
         android:text="Reset"
         android:textColor="#01579B"
         android:textStyle="bold" />
