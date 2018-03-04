@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     int scorePanathinaikos = 0;
     int scoreRealMadrid = 0;
-    String STATE_PANATHINAIKOS;
-    String STATE_REALMADRID;
+    String STATE_PANATHINAIKOS= "STATE_SCOREPANATHINAIKOS";
+    String STATE_REALMADRID = "STATE_REALMADRID";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
