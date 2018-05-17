@@ -30,4 +30,14 @@
         <item name="android:textAppearance">?android:textAppearanceLarge</item>
     </style>
 
+    <!-- Category of music to pick -->
+    <style name="category">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/list_item_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
 </resources>

@@ -1,7 +1,10 @@
 package com.example.android.musicalstructure;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -15,7 +18,7 @@ public class ElectMusicActivity extends AppCompatActivity {
 
 
         // Creates an ArrayList of songs
-        ArrayList<Song> songs = new ArrayList<Song>();
+        ArrayList<Song> songs = new ArrayList<>();
         songs.add(new Song ("Trippin", "Debris & Jonth"));
         songs.add (new Song ("More (feat. Philip Matta)", "Starlyte, SON & CHRSTN" ));
         songs.add(new Song ("Dance With Me","Sagan"));
@@ -29,9 +32,21 @@ public class ElectMusicActivity extends AppCompatActivity {
 
 
         SongAdapter adapter = new SongAdapter(this, songs);
-        ListView listView = (ListView) findViewById(R.id.song_list);
+        ListView listView = findViewById(R.id.song_list);
         listView.setAdapter(adapter);
+
+
+        /* Find the Home button*/
+        Button homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent homeButton = new Intent(ElectMusicActivity.this, MainActivity.class);
+                startActivity(homeButton);
+            }
+        });
     }
+
 
 }
 

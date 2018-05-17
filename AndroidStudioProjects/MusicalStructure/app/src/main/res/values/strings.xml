@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">MusicalStructure</string>
-    <string name="myMusic">My Music</string>
     <string name="choose_your_music">Choose your music</string>
     <string name="house_music_category">House Music</string>
     <string name="elect_music_category">Electronic Music</string>
     <string name="pop_music_category">Pop Music</string>
+    <string name="music_player">MUSIC PLAYER</string>
+    <string name="home_button">home</string>
 </resources>
