@@ -4,6 +4,7 @@ public class CurrentSong {
     private String mSongName;
     private String mArtistName;
 
+
     public CurrentSong(String songName, String artistName) {
         mSongName = songName;
         mArtistName = artistName;
@@ -13,9 +14,9 @@ public class CurrentSong {
         return mSongName;
     }
 
-    public String getArtistName() {
-        return mArtistName;
-    }
+    public String getArtistName() { return mArtistName; }
+
+
 }
 
 

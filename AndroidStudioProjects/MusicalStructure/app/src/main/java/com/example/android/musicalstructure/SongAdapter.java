@@ -11,7 +11,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+
+
 public class SongAdapter extends ArrayAdapter<Song> {
+    
 
     public SongAdapter(Activity context, ArrayList<Song> androidSongs) {
         super(context,0,androidSongs);
@@ -24,6 +27,20 @@ public class SongAdapter extends ArrayAdapter<Song> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
+        /* Setting OnClickListener on the list view items */
+        listItemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), CurrentSong.class);
+                Song currentSong = null;
+                i.putExtra("songName", currentSong.getSongName());
+                i.putExtra("artistName", currentSong.getArtistName());
+                getContext().startActivity(i);
+            }
+        });
+
+
+
 
         final Song currentSong = getItem(position);
 
@@ -35,19 +52,8 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
         return listItemView;
 
-        /* Setting OnClickListener on the list view items */
-        listItemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getContext(), CurrentSong.class);
-                i.putExtra("songName", currentSong.getSongName());
-                i.putExtra("artistName", (currentSong.getSongName());
-                getContext().startActivity(i);
-            }
-        });
 
-
-    }
+        }
 
 
 }

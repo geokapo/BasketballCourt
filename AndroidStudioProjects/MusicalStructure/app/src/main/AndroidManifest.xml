@@ -29,5 +29,10 @@
     <activity
         android:name=".PopMusicActivity"
         android:label="@string/pop_music_category"/>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/activity_detail"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 </manifest>
